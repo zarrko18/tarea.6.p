@@ -1,0 +1,47 @@
+  <div class="row">
+   <div class="eleven column" style="margin-top: 10%">
+    <h2>{{title}}</h2>
+     {{#Books}}
+     <form>
+     <div class="row">
+      <div class="six columns">
+       <label for="nameInput">title</label>
+       <input class="u-full-width" type="text" 
+         {{#show}} readonly {{/show}}
+         id="title"  name="title" value="{{title}}">
+      </div>
+      <div class="six columns">
+       <label for="degreeInput">edition</label>
+       <input class="u-full-width" type="text"
+          {{#show}} readonly {{/show}}
+          id="edition" name="edition" value="{{edition}}">
+      </div>
+     </div>
+     <div class="row">
+      <div class="six columns">
+       <label for="emailInput">copyright</label>
+       <input class="u-full-width" type="text"
+          {{#show}} readonly {{/show}}
+          id="copyright" name="copyright" value="{{copyright}}">
+      </div>
+      <div class="six columns">
+       <label for="phoneInput">pages</label>
+       <input class="u-full-width" type="tel"
+         {{#show}} readonly {{/show}}
+         id="pages" name="pages" value="{{pages}}">
+      </div>
+      <a class="button button-primary" href="/Book"
+	    data-navigo>Back</a>
+     {{#edit}}
+	   <a class="button button-primary" style="float: right" 
+	     data-navigo href="/Book/update/{{id}}">Update</a>
+	     {{/edit}}
+     {{#create}}
+	  <input type="hidden" name="_method" value="PUT">
+	   <a class="button button-primary" style="float: right" 
+	     data-navigo href="/Book/store">Create</a>
+	 {{/create}}
+     {{/Books}}
+    </form>
+   </div>
+  </div>

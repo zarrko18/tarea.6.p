@@ -1,0 +1,26 @@
+  <div class="row">
+   <div style="margin-top: 10%">
+     <h2>{{title}}</h2>
+     <table><thead>
+      <tr>
+        <th>name</th>
+        <th>country</th>
+        <th>founded</th>
+        <th>genere</th></th></tr>
+      </thead><tbody>
+      {{#publisher}}
+      <td>{{name}}</td>
+      <td>{{country}}</td>
+      <td>{{founded}}</td>
+      <td>{{genere}}</td>
+      <td>
+      <a class="button" href="/publisher/show/{{id}}" data-navigo>Show</a>
+      <a class="button" href="/publisher/edit/{{id}}" data-navigo>Edit</a>
+      <a class="button" href="/publisher/delete/{{id}}" data-navigo>Erase</a>
+      </td>
+      </tr>
+      {{/publisher}}</tbody>
+     </table>
+     <a class="button button-primary" href="/publisher/create" data-navigo>New</a>
+   </div>
+  </div>
